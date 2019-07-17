@@ -1,0 +1,37 @@
+{
+  "data": {
+    "documents": [
+      {
+        "type": "bank_draft",
+        "title": "Bank Draft",
+        "position": 0
+      },
+      {
+        "type": "bill_of_lading",
+        "title": "Bill of Lading",
+        "position": 1
+      },
+      {
+        "type": "invoice",
+        "title": "Invoice",
+        "position": 2
+      }
+    ],
+    "columns": [
+      {
+        "column-1": {
+          "id": "column-1",
+          "title": "Bank Draft",
+          "documentIds": [
+            "bank_draft",
+            "bill_of_lading",
+            "invoice"
+          ]
+        }
+      }
+    ],
+    "columnOrder": [
+      "column-1"
+    ]
+  }
+}
