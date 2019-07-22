@@ -1,31 +1,49 @@
 {   
     "data" : {
-        "documents": [
-            {
-                "type": "bank_draft", 
-                "title": "Bank Draft", 
-                "position": 0 
-            },
-            {
-                "type": "bill_of_lading", 
-                "title": "Bill of Lading", 
-                "position": 1 
-            },
-            {
-                "type": "invoice", 
-                "title": "Invoice", 
-                "position": 2
-            }
-        ],
-        "columns": [
+        "documents": {
+            
+                "document-1" : {
+                    "id" : "document-1",
+                    "type": "bank_draft", 
+                    "title": "Cat Lick", 
+                    "position": 0 
+                },
+            
+                "document-2": {
+                    "id": "document-2",
+                    "type": "bill_of_lading", 
+                    "title": "Cat Ride", 
+                    "position": 1 
+                },
+            
+                "document-3":   {
+                    "id": "document-3",
+                    "type": "invoice", 
+                    "title": "Cat Content", 
+                    "position": 2
+                }
+        
+        }
+        ,
+        "columns": 
             {
                 "column-1": {
                     "id": "column-1",
                     "title": "Bank Draft",
-                    "documentIds": ["bank_draft","bill_of_lading","invoice"]
+                    "documentIds": ["document-1"]
+                },
+                "column-2": {
+                    "id": "column-2",
+                    "title": "Bill of Lading",
+                    "documentIds": ["document-2"]
+                },
+                "column-3": {
+                    "id": "column-3",
+                    "title": "Invoice",
+                    "documentIds": ["document-3"]
                 }
             }
-        ],
-        "columnOrder": ["column-1"]
+        ,
+        "columnOrder": ["column-1","column-2","column-3"]
     }
 }

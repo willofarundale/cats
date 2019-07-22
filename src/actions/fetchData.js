@@ -1,7 +1,9 @@
 import {
     fetchDataPending,
-    fetchDataSuccess, 
-    fetchDataError
+    fetchDataError,
+    setDocuments,
+    setColumns,
+    setColumnOrder
 } from './index';
 
 export function fetchData() {
@@ -11,8 +13,9 @@ export function fetchData() {
         .then(handleErrors)
         .then(res => res.json())
         .then(res => {
-          dispatch(fetchDataSuccess(res));
-          console.log(res)
+          dispatch(setDocuments(res.documents));
+          dispatch(setColumns(res.columns));
+          dispatch(setColumnOrder(res.columnOrder));
           return res;
         })
         .catch(error => dispatch(fetchDataError(error)));

@@ -1,12 +1,16 @@
 import { 
 FETCH_DATA_PENDING, 
-FETCH_DATA_SUCCESS,
 FETCH_DATA_ERROR,
+SET_DOCUMENTS,
+SET_COLUMNS,
+SET_COLUMN_ORDER,
 } from '../actions';
 
 const initialState = {
     pending: false,
-    data: [],
+    documents: [],
+    columns: [],
+    columnOrder:[],
     error: null
 };
 
@@ -20,18 +24,32 @@ export default function dataReducer(state=initialState, action) {
                 error: null
             }
         
-        case FETCH_DATA_SUCCESS:
-            return {
-                ...state,
-                pending: false,
-                data: action.payload.data.documents
-            }
-
         case FETCH_DATA_ERROR:
             return {
                 ...state,
                 pending: false,
-                error: action.payload.data.error
+                error: action.payload.error
+            }
+
+        case SET_DOCUMENTS:
+            return {
+                ...state,
+                documents: action.payload.documents,
+                pending: false
+            } 
+        
+        case SET_COLUMNS:
+            return {
+                ...state,
+                columns: action.payload.columns,
+                pending: false
+            }
+
+        case SET_COLUMN_ORDER:
+            return {
+                ...state,
+                columnOrder: action.payload.columnOrder,
+                pending:false
             }
 
         default:
@@ -40,6 +58,8 @@ export default function dataReducer(state=initialState, action) {
        }
 }
 
-export const getData = state => state.data.data;
+export const getDocuments = state => state.data.documents;
+export const getColumns = state => state.data.columns;
+export const getColumnOrder = state => state.data.columnOrder;
 export const getDataPending = state => state.data.pending;
 export const getDataError = state => state.data.error;
