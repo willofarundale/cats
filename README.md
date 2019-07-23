@@ -1,6 +1,6 @@
-# Contacts
+# Cats
 
-Submitting a Contact Form!
+Re-Ordering Cat Columns
 
 ## Installation
 
@@ -12,7 +12,6 @@ Within the project directory:
 ```python
 npm install # installs npm
 npm start # runs the app in development mode (default: http://localhost:3000)
-npm test # Launches the test runner in watch mode.
 ```
 
 This project uses json-server as a mock server! <br/>
@@ -22,3 +21,9 @@ npm start # Launches the local server http://localhost:3001
 ```
 
 User can check that the form has been successfully submitted by either checking the file db.json within the api directory or by inspecting network requests within browser dev-tools.
+
+#Linting
+Within the src directory:
+```python
+npm run lint
+```
