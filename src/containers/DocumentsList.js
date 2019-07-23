@@ -4,13 +4,14 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import Column from '../components/Column';
 import { fetchData } from '../actions/fetchData';
 import { setColumns } from '../actions/index';
-import { 
-    getDataPending, 
+import {
+    getDataPending,
     getDataError,
     getDocuments,
     getColumns,
     getColumnOrder
 } from '../reducers/dataReducer';
+import PropTypes from 'prop-types';
 
 
 class DocumentList extends Component {
@@ -95,7 +96,7 @@ class DocumentList extends Component {
 
         // this.setState(newState);
 
-        // TODO 
+        // TODO
         // As above
         setColumns(newState);
     }
@@ -122,6 +123,15 @@ class DocumentList extends Component {
         </div>
         );
     }
+}
+
+DocumentList.propTypes = {
+    fetchData: PropTypes.func,
+    columns: PropTypes.array,
+    columnOrder: PropTypes.array,
+    error: PropTypes.object,
+    pending: PropTypes.bool,
+    documents: PropTypes.array,
 }
 
 const mapStateToProps = state => ({

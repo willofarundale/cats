@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
+import PropTypes from 'prop-types';
 
 import Cat1 from '../cats/cat-1.gif';
 import Cat2 from '../cats/cat-2.gif';
@@ -16,7 +17,7 @@ class Document extends Component {
     render() {
         const { document, index } = this.props;
         return (
-            <Draggable 
+            <Draggable
             draggableId={document.id}
             index={index}
             >
@@ -28,17 +29,22 @@ class Document extends Component {
                             ref={provided.innerRef}
                         >
                             <span className="title">{document.title}</span>
-                            <img src={kittenByType[document.type]} 
+                            <img src={kittenByType[document.type]}
                             className="img"
                             alt="kitten-image"
                             />
                         </div>
                     )
                 }
-               
+
             </Draggable>
         );
     }
+}
+
+Document.propTypes = {
+    document: PropTypes.object,
+    index: PropTypes.number,
 }
 
 export default Document;

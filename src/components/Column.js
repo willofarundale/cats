@@ -1,6 +1,7 @@
 import React,{ Component, Fragment } from 'react';
 import Document from './Document';
 import { Droppable } from 'react-beautiful-dnd';
+import PropTypes from 'prop-types';
 
 class Column extends Component {
     render() {
@@ -22,6 +23,11 @@ class Column extends Component {
             </Fragment>
         )
     }
+}
+
+Column.propTypes = {
+    column: PropTypes.array,
+    documents: PropTypes.array,
 }
 
 export default Column;
