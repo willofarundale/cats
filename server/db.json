@@ -1,31 +1,31 @@
-{   
+{
     "data" : {
         "documents": {
-            
+
                 "document-1" : {
                     "id" : "document-1",
-                    "type": "bank_draft", 
-                    "title": "Cat Lick", 
-                    "position": 0 
+                    "type": "bank_draft",
+                    "title": "Cat Lick",
+                    "position": 0
                 },
-            
+
                 "document-2": {
                     "id": "document-2",
-                    "type": "bill_of_lading", 
-                    "title": "Cat Ride", 
-                    "position": 1 
+                    "type": "bill_of_lading",
+                    "title": "Cat Ride",
+                    "position": 1
                 },
-            
+
                 "document-3":   {
                     "id": "document-3",
-                    "type": "invoice", 
-                    "title": "Cat Content", 
+                    "type": "invoice",
+                    "title": "Cat Content",
                     "position": 2
                 }
-        
+
         }
         ,
-        "columns": 
+        "columns":
             {
                 "column-1": {
                     "id": "column-1",
